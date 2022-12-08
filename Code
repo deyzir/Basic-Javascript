@@ -1,0 +1,33 @@
+
+function add(c,v) {
+  if (typeof c !== "number" || typeof v !== "number") {
+    console.log("just numbers");
+    return null;
+  }
+  return c + v;
+}
+
+function minus(c, v) {
+  return c - v;
+}
+
+const mul = (c, v) => {
+  return c * v;
+};
+
+const div = (c, v) => c / v;
+
+function procces(c, v, op) {
+  return op(c, v);
+}
+
+
+const mulResult = procces(3, 2, mul);
+const twoSquared = procces(2, 3, (c, v) => c ** v);
+const probablyArr = procces(5, 10, function (c, v) {
+  return [a, b];
+});
+console.log(mulResult, twoSquared);
+console.log(probablyArr);
+
+let num = 1;
